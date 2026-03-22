@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.Pages.Login.LoginPage"
+             Title="LoginPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#43C59E">
+            <Border StrokeShape="RoundRectangle 100,100,100,100" MaximumWidthRequest="1000" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#48BEFF">
+                <StackLayout>
+                    <StackLayout BackgroundColor="#14453D" HeightRequest="5" WidthRequest="2000"/>
+                    <StackLayout MaximumWidthRequest="500"  Margin="0,10,0,10">
+                        <Entry Text="{Binding Username}" Placeholder="Escribe el usuario" PlaceholderColor="#14453D" BackgroundColor="#3DFAFF" FontAttributes="Bold"/>
+                        <Entry Text="{Binding Password}" Placeholder="Escribe la contraseña" IsPassword="True" PlaceholderColor="#14453D" BackgroundColor="#3DFAFF" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                    <Button Text="Iniciar Sesión" Command="{Binding iniciarSesionCommand }" BackgroundColor="#3DFAFF" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+                    <Button Text="Registrase" Command="{Binding registrarCommand}" BackgroundColor="#3DFAFF" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+
+                </StackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
