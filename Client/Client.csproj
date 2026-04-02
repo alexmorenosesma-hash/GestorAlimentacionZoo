@@ -73,17 +73,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Pages\Menu\" />
 	  <Folder Include="Pages\Inventarios\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Aplication\Aplication.csproj" />
-	  <ProjectReference Include="..\Domain\Domain.csproj" />
+	  <ProjectReference Include="..\Infraestructure\Infraestructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\Login\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Menu\MenuPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
