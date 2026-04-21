@@ -1,5 +1,9 @@
 ﻿using Aplication.Interfaces.Firebase.Authentication;
+using Aplication.Interfaces.Firebase.Realtime;
+using Aplication.Interfaces.Repositories;
+using Infraestructure.Repositories;
 using Infraestructure.Services.Firebase.Auth;
+using Infraestructure.Services.Firebase.Realtime;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,6 +16,8 @@ namespace Infraestructure
         public static void AddInfraestructure(this IServiceCollection services)
         {
             services.AddScoped<IAuthService,AuthService>();
+            services.AddTransient<IRealtimeService, RealtimeService>();
+            services.AddTransient<IEspecieRepository, EspecieRepository>();
         }
     }
 }

@@ -1,7 +1,12 @@
-﻿using Client.Pagemodel.Login;
+﻿using Client.Pagemodel.Inventarios;
+using Client.Pagemodel.Login;
+using Client.Pagemodel.Menu;
+using Client.Pagemodel.Popups;
 using Client.Pages.Login;
+using Client.Popups;
 using CommunityToolkit.Maui;
 using Infraestructure;
+using MauiIcons.Fluent;
 using Microsoft.Extensions.Logging;
 
 namespace Client
@@ -14,6 +19,7 @@ namespace Client
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseFluentMauiIcons()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -31,6 +37,11 @@ namespace Client
         {
             builder.Services.AddScoped<LoginPage>();
             builder.Services.AddScoped<LoginPagemodel>();
+            builder.Services.AddTransient<MenuPagemodel>();
+            builder.Services.AddTransient<EspeciePagemodel>();
+            builder.Services.AddTransientPopup<EspeciePopup, EspeciePopupPagemodel>();
+            builder.Services.AddTransientPopup<EspecieModificarPopup, EspecieModificarPopupPagemodel>();
+            builder.Services.AddTransientPopup<EliminarPopup, EliminarPopupPagemodel>();
             return builder;
         }
     }

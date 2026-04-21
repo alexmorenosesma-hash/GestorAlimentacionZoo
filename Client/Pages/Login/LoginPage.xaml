@@ -19,9 +19,8 @@
                             <Entry Text="{Binding Password}" Placeholder="Escribe la contraseña" IsPassword="True" PlaceholderColor="#14453D" BackgroundColor="#E7E5DF" FontAttributes="Bold"/>
                         </Border>
                     </StackLayout>
-                   <!-- <StackLayout BackgroundColor="#14453D" HeightRequest="2" WidthRequest="750" Margin="10"/> -->
                     <Button Text="Iniciar Sesión" Command="{Binding iniciarSesionCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,5"/>
-                    <Button Text="Recuperar Contraseña" Command="{Binding registrarCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,15"/>
+                    <Button Text="Recuperar Contraseña" Command="{Binding recuperarContraseñaCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,15"/>
                 </StackLayout>
             </Border>
         </VerticalStackLayout>

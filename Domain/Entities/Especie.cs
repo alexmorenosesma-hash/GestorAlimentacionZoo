@@ -6,9 +6,10 @@ namespace Domain.Entities
 {
     public class Especie
     {
-        string nombre { get; set; }
-        string nombreCientifico { get; set; }
-        string tipoAlimentacion { get; set; }
+        public string idEspecie { get; set; }
+        public string nombre { get; set; }
+        public string nombreCientifico { get; set; }
+        public string tipoAlimentacion { get; set; }
         
         public Especie()
         {

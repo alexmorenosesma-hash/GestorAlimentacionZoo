@@ -18,16 +18,31 @@ public partial class LoginPagemodel : ObservableObject
 	}
     
     [RelayCommand]
-    public async Task registrar()
+    public async Task recuperarContraseña()
     {
         try
         {
-            await _auth.registerAsync(Username, Password);
-            await Application.Current.MainPage.DisplayAlertAsync("OK", "Usuario creado", "Aceptar");
+            await _auth.resetEmailPasswordAsync(Username);
+            await Application.Current.MainPage.DisplayAlertAsync("Ok", "Se ha enviado la peticion de cambio de contraseña", "Aceptar");
         }
         catch (Exception ex)
         {
             await Application.Current.MainPage.DisplayAlertAsync("Error", ex.Message, "OK");
+        }
+    }
+    [RelayCommand]
+    public async Task iniciarSesion()
+    {
+        try
+        {
+            var usuario = await _auth.loginAsync(Username, Password);
+            await Application.Current.MainPage.DisplayAlertAsync("Bienvenido", "Se ha iniciado sesion", "Ok");
+            Application.Current.Windows[0].Page = new AppShell();
+        }
+        catch (Exception ex)
+        {
+            await Application.Current.MainPage.DisplayAlertAsync("Error", ex.Message, "OK");
+
         }
     }
 }

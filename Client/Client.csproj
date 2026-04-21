@@ -66,14 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="14.0.1" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.50" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Pages\Inventarios\" />
+		<PackageReference Include="AathifMahir.Maui.MauiIcons.Core" Version="6.0.0" />
+		<PackageReference Include="AathifMahir.Maui.MauiIcons.Fluent" Version="6.0.0" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="14.1.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.6" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -82,10 +80,58 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\Inventarios\AlimentoPage.xaml.cs">
+	    <DependentUpon>AlimentoPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Inventarios\AnimalPage.xaml.cs">
+	    <DependentUpon>AnimalPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Inventarios\DietaPage.xaml.cs">
+	    <DependentUpon>DietaPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Inventarios\EspeciePage.xaml.cs">
+	    <DependentUpon>EspeciePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Inventarios\HorarioPage.xaml.cs">
+	    <DependentUpon>HorarioPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Popups\EliminarPopup.xaml.cs">
+	    <DependentUpon>EliminarPopup.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Popups\EspeciePopup.xaml.cs">
+	    <DependentUpon>EspeciePopup.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Inventarios\AlimentoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inventarios\AnimalPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inventarios\DietaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inventarios\EspeciePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inventarios\HorarioPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Menu\MenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Popups\EliminarPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Popups\EspecieModificarPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Popups\EspeciePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
